@@ -1,0 +1,1 @@
+rabbitmqadmin publish --vhost=test exchange=amq.default routing_key=qq200 payload="hello, world" 
