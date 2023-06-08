@@ -4,6 +4,17 @@ metadata:
   name: downstream-rabbit
   namespace: rabbitmq-system
 spec:
+  replicas: 1
+  imagePullSecrets:
+  - name: tanzu-rabbitmq-registry-creds
+
+---
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: downstream-rabbit
+  namespace: rabbitmq-system
+spec:
   rabbitmq:
     additionalPlugins:
       - rabbitmq_stream
@@ -19,6 +30,13 @@ spec:
       standby.replication.retention.size_limit.messages = 5000000000
   # service:
   #   type: NodePort
+    resources:
+    requests:
+      cpu: 100m
+      memory: 500Mi
+    limits:
+      cpu: 100m
+      memory: 500Mi
 
 
 
