@@ -1,12 +1,4 @@
-apiVersion: rabbitmq.com/v1beta1
-kind: RabbitmqCluster
-metadata:
-  name: downstream-rabbit
-  namespace: rabbitmq-system
-spec:
-  replicas: 1
-  imagePullSecrets:
-  - name: tanzu-rabbitmq-registry-creds
+
 
 ---
 apiVersion: rabbitmq.com/v1beta1
@@ -135,6 +127,5 @@ spec:
     name: downstream-rabbit 
 
 ---
-
 
 
