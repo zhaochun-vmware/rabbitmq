@@ -7,7 +7,7 @@ metadata:
   name: upstream-rabbit
   namespace: rabbitmq-system
 spec:
-  # replicas: 3
+  replicas: 1
   rabbitmq:
     additionalPlugins:
       - rabbitmq_stream
