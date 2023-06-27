@@ -7,3 +7,10 @@ spec:
   replicas: 1
   imagePullSecrets:
   - name: tanzu-rabbitmq-registry-creds
+  resources:
+    requests:
+      cpu: 100m
+      memory: 1Gi
+    limits:
+      cpu: 100m
+      memory: 1Gi
