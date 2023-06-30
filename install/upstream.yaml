@@ -85,7 +85,7 @@ metadata:
   name: upstream
   namespace: rabbitmq-system  
 spec:
-  endpoints: "10.1.0.5:5672" # port 5672
+  endpoints: "UPSTREAMIP:5672" # port 5672
   upstreamSecret:
     name: upstream-secret
   rabbitmqClusterReference:
